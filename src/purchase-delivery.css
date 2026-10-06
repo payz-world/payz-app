@@ -1,0 +1,661 @@
+.purchase-delivery-page,
+.purchase-unavailable,
+.purchase-delivery-loading {
+  min-height: 100dvh;
+  color: #232a30;
+  background: #fafaf8;
+  font-family: var(--app-font-sans, "DM Sans"), system-ui, sans-serif;
+}
+
+.purchase-delivery-page *,
+.purchase-unavailable *,
+.purchase-delivery-loading * {
+  box-sizing: border-box;
+}
+
+.purchase-delivery-header {
+  width: min(100% - 40px, 940px);
+  min-height: 72px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #e5e8e9;
+}
+
+.purchase-delivery-wordmark {
+  width: 40px;
+  height: 27px;
+  display: inline-flex;
+  align-items: center;
+  color: #20262b;
+  font-size: 23px;
+  font-weight: 700;
+  letter-spacing: -1.3px;
+  text-decoration: none;
+}
+
+.purchase-delivery-wordmark .payz-brand-logo {
+  width: 40px;
+  height: 27px;
+}
+
+.purchase-close-button {
+  display: grid;
+  width: 44px;
+  height: 44px;
+  place-items: center;
+  border: 1px solid #e1e5e7;
+  border-radius: 5px;
+  color: #56616a;
+  background: #fff;
+  cursor: pointer;
+  transition: color 160ms ease, border-color 160ms ease, background-color 160ms ease;
+}
+
+.purchase-close-button:hover {
+  border-color: #c8d0d5;
+  color: #273e54;
+  background: #f6f8f9;
+}
+
+.purchase-close-button svg {
+  width: 18px;
+  height: 18px;
+}
+
+.purchase-delivery-content {
+  width: min(100% - 40px, 680px);
+  margin: 36px auto 72px;
+}
+
+.purchase-ready-card,
+.purchase-delivery-section,
+.purchase-download-panel,
+.purchase-once-notice {
+  border: 1px solid #e2e6e8;
+  border-radius: 6px;
+  background: #fff;
+}
+
+.purchase-ready-card {
+  padding: 29px 30px 0;
+}
+
+.purchase-delivery-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: #737e86;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .09em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.purchase-delivery-eyebrow svg {
+  width: 14px;
+  height: 14px;
+  color: #58746a;
+}
+
+.purchase-ready-card h1 {
+  margin: 11px 0 23px;
+  color: #22292f;
+  font-size: clamp(23px, 4vw, 30px);
+  font-weight: 600;
+  letter-spacing: -.7px;
+  line-height: 1.2;
+}
+
+.purchase-delivery-product {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 18px 0 21px;
+  border-top: 1px solid #edf0f1;
+}
+
+.purchase-delivery-product > div:last-child {
+  display: grid;
+  gap: 5px;
+}
+
+.purchase-delivery-product strong {
+  color: #252c32;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+.purchase-delivery-product span {
+  color: #747e85;
+  font-size: 12px;
+}
+
+.purchase-delivery-product-logo {
+  display: grid;
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  place-items: center;
+  overflow: hidden;
+  border: 1px solid #e6e9eb;
+  border-radius: 6px;
+  color: var(--logo-color, #56616a);
+  background: var(--brand-color, #f1f3f4);
+}
+
+.purchase-delivery-product-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.purchase-delivery-product-logo svg {
+  width: 25px;
+  height: 25px;
+}
+
+.purchase-payment-confirmed {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin: 0 -30px;
+  padding: 15px 30px;
+  border-top: 1px solid #edf0f1;
+  background: #fbfcfc;
+}
+
+.purchase-payment-confirmed span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #496754;
+  font-size: 10px;
+  font-weight: 650;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.purchase-payment-confirmed span svg {
+  width: 16px;
+  height: 16px;
+}
+
+.purchase-payment-confirmed strong {
+  color: #545f67;
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.purchase-delivery-section {
+  margin-top: 16px;
+  padding: 25px 30px 28px;
+}
+
+.purchase-delivery-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 19px;
+  border-bottom: 1px solid #edf0f1;
+}
+
+.purchase-delivery-section-heading > svg {
+  width: 18px;
+  height: 18px;
+  color: #74818a;
+}
+
+.purchase-delivery-section-heading h2 {
+  margin: 6px 0 0;
+  color: #252c32;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: -.25px;
+}
+
+.purchase-secret-field {
+  display: grid;
+  gap: 11px;
+  margin-top: 21px;
+  padding: 16px;
+  border: 1px solid #e4e8ea;
+  border-radius: 5px;
+  background: #fafbfb;
+}
+
+.purchase-secret-field > span {
+  color: #717d85;
+  font-size: 11px;
+  font-weight: 550;
+}
+
+.purchase-secret-field > code {
+  overflow-wrap: anywhere;
+  color: #232a30;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.purchase-secret-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.purchase-delivery-primary,
+.purchase-delivery-secondary,
+.purchase-delete-access-button {
+  display: inline-flex;
+  min-height: 42px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 0 14px;
+  border: 1px solid #dfe4e6;
+  border-radius: 5px;
+  color: #414b53;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 550;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 160ms ease, background-color 160ms ease, border-color 160ms ease, transform 160ms ease;
+}
+
+.purchase-delivery-primary {
+  border-color: #2d3b43;
+  color: #fff;
+  background: #2d3b43;
+}
+
+.purchase-delivery-primary:hover {
+  background: #3b4b54;
+}
+
+.purchase-delivery-secondary:not(:disabled):hover {
+  border-color: #c4cdd3;
+  color: #263f56;
+  background: #f7f9fa;
+}
+
+.purchase-delivery-primary svg,
+.purchase-delivery-secondary svg {
+  width: 15px;
+  height: 15px;
+}
+
+.purchase-delivery-primary:disabled,
+.purchase-delivery-secondary:disabled,
+.purchase-delete-access-button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.purchase-reveal-details {
+  margin-top: 20px;
+}
+
+.purchase-redemption-instructions {
+  margin-top: 22px;
+  padding-top: 18px;
+  border-top: 1px solid #edf0f1;
+}
+
+.purchase-redemption-instructions h3 {
+  margin: 0 0 9px;
+  color: #4a555d;
+  font-size: 12px;
+  font-weight: 650;
+}
+
+.purchase-redemption-instructions p {
+  margin: 0;
+  color: #58636b;
+  font-size: 13px;
+  line-height: 1.7;
+  white-space: pre-wrap;
+}
+
+.purchase-redemption-link {
+  width: fit-content;
+  margin-top: 18px;
+}
+
+.purchase-expiration {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 17px 0 0;
+  color: #737e86;
+  font-size: 11px;
+}
+
+.purchase-expiration svg {
+  width: 14px;
+  height: 14px;
+}
+
+.purchase-download-panel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  margin-top: 16px;
+  padding: 17px 20px;
+}
+
+.purchase-download-panel > div {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.purchase-download-panel > div > svg {
+  width: 19px;
+  height: 19px;
+  color: #62727c;
+}
+
+.purchase-download-panel span {
+  display: grid;
+  gap: 4px;
+}
+
+.purchase-download-panel strong {
+  color: #39434a;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.purchase-download-panel small {
+  color: #78828a;
+  font-size: 10px;
+}
+
+.purchase-once-notice {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+  padding: 17px 19px;
+  border-color: #e2e8ec;
+  background: #f1f5f7;
+}
+
+.purchase-once-notice > svg {
+  width: 17px;
+  height: 17px;
+  flex: 0 0 auto;
+  color: #63747b;
+}
+
+.purchase-once-notice strong {
+  color: #3d484e;
+  font-size: 11px;
+  font-weight: 650;
+}
+
+.purchase-once-notice p {
+  margin: 5px 0 0;
+  color: #6e797f;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.purchase-action-error,
+.purchase-consume-error {
+  color: #8b3d3d;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.purchase-leave-dialog {
+  width: min(100% - 32px, 510px);
+  max-width: 510px;
+  max-height: min(90vh, 720px);
+  padding: 27px;
+  overflow: auto;
+  border: 1px solid #dfe4e6;
+  border-radius: 8px;
+  color: #283036;
+  background: #fff;
+  box-shadow: 0 22px 75px rgba(25, 35, 42, .2);
+}
+
+.purchase-leave-dialog::backdrop {
+  background: rgba(29, 38, 44, .47);
+}
+
+.purchase-leave-dialog h2 {
+  margin: 9px 0 9px;
+  font-size: 22px;
+  font-weight: 600;
+  letter-spacing: -.4px;
+}
+
+.purchase-leave-dialog > p {
+  margin: 0;
+  color: #68737a;
+  font-size: 13px;
+  line-height: 1.6;
+}
+
+.purchase-leave-checklist {
+  display: grid;
+  gap: 11px;
+  margin: 19px 0 23px;
+}
+
+.purchase-leave-checklist label {
+  display: flex;
+  min-height: 46px;
+  align-items: center;
+  gap: 11px;
+  padding: 10px 12px;
+  border: 1px solid #e5e9ea;
+  border-radius: 5px;
+  color: #4b565e;
+  font-size: 12px;
+  cursor: pointer;
+  transition: border-color 160ms ease, background-color 160ms ease;
+}
+
+.purchase-leave-checklist label:has(input:checked) {
+  border-color: #c8d5dc;
+  background: #f4f7f8;
+}
+
+.purchase-leave-checklist input {
+  width: 19px;
+  height: 19px;
+  flex: 0 0 auto;
+  accent-color: #344952;
+}
+
+.purchase-leave-checklist input:focus-visible {
+  outline: 2px solid #71869a;
+  outline-offset: 3px;
+}
+
+.purchase-leave-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 9px;
+  margin-top: 21px;
+}
+
+.purchase-delete-access-button {
+  border-color: #714343;
+  color: #fff;
+  background: #714343;
+}
+
+.purchase-delete-access-button:not(:disabled):hover {
+  background: #865151;
+}
+
+.purchase-consume-error {
+  display: grid;
+  gap: 4px;
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #efd9d9;
+  border-radius: 5px;
+  background: #fff8f8;
+}
+
+.purchase-leave-retry {
+  display: flex;
+  justify-content: flex-end;
+  gap: 16px;
+  margin-top: 12px;
+}
+
+.purchase-leave-retry button {
+  padding: 4px;
+  border: 0;
+  color: #58656d;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.purchase-leave-retry button:disabled {
+  opacity: .55;
+  cursor: not-allowed;
+}
+
+.purchase-delivery-loading,
+.purchase-unavailable {
+  display: grid;
+  min-height: 100vh;
+  place-content: center;
+  justify-items: center;
+  padding: 24px;
+  text-align: center;
+}
+
+.purchase-delivery-loading p {
+  margin-top: 17px;
+  color: #68747b;
+  font-size: 12px;
+}
+
+.purchase-loading-indicator {
+  width: 27px;
+  height: 27px;
+  margin-top: 37px;
+  border: 2px solid #dce2e4;
+  border-top-color: #536a74;
+  border-radius: 50%;
+  animation: purchase-delivery-spin .8s linear infinite;
+}
+
+@keyframes purchase-delivery-spin {
+  to { transform: rotate(360deg); }
+}
+
+.purchase-unavailable > section {
+  display: grid;
+  max-width: 440px;
+  justify-items: center;
+  margin-top: 34px;
+  padding: 35px;
+  border: 1px solid #e2e6e8;
+  border-radius: 7px;
+  background: #fff;
+}
+
+.purchase-unavailable > section > svg {
+  width: 25px;
+  height: 25px;
+  margin-bottom: 17px;
+  color: #657780;
+}
+
+.purchase-unavailable h1 {
+  margin: 9px 0 23px;
+  font-size: 19px;
+  font-weight: 550;
+  line-height: 1.5;
+}
+
+.purchase-delivery-page :is(a, button):focus-visible,
+.purchase-unavailable :is(a, button):focus-visible,
+.purchase-leave-dialog button:focus-visible {
+  outline: 2px solid #71869a;
+  outline-offset: 3px;
+}
+
+.purchase-delivery-page button:active:not(:disabled),
+.purchase-leave-dialog button:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  .purchase-delivery-header {
+    width: calc(100% - 30px);
+    min-height: 62px;
+  }
+
+  .purchase-delivery-content {
+    width: calc(100% - 30px);
+    margin: 18px auto 42px;
+  }
+
+  .purchase-ready-card {
+    padding: 22px 19px 0;
+  }
+
+  .purchase-ready-card h1 {
+    font-size: clamp(22px, 6.5vw, 27px);
+  }
+
+  .purchase-payment-confirmed {
+    align-items: flex-start;
+    flex-direction: column;
+    margin: 0 -19px;
+    padding: 13px 19px;
+  }
+
+  .purchase-delivery-section {
+    padding: 20px 19px 23px;
+  }
+
+  .purchase-download-panel {
+    align-items: stretch;
+    flex-direction: column;
+    padding: 17px;
+  }
+
+  .purchase-download-panel button {
+    width: 100%;
+    min-height: 46px;
+  }
+
+  .purchase-leave-dialog {
+    padding: 22px 18px;
+  }
+
+  .purchase-unavailable > section {
+    padding: 28px 22px;
+  }
+
+  .purchase-leave-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .purchase-leave-actions button {
+    width: 100%;
+    min-height: 46px;
+  }
+}
