@@ -1,0 +1,11 @@
+{
+  "name": "payz-app-development-workspace",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "pnpm --filter payz-app dev",
+    "typecheck": "pnpm --filter payz-app typecheck",
+    "test": "pnpm --filter payz-app test",
+    "build": "pnpm --filter payz-app build"
+  }
+}
