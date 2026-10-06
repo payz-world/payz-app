@@ -1,0 +1,19 @@
+{
+  "id": "/app",
+  "name": "Private payments for real-life everyday needs.",
+  "short_name": "Private payments for real-life everyday needs.",
+  "description": "Private payments for real-life everyday needs.",
+  "start_url": "/app/",
+  "scope": "/app/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#f8f8f6",
+  "theme_color": "#f8f8f6",
+  "icons": [
+    {
+      "src": "payz-logo-cropped.png",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
